@@ -13,7 +13,6 @@ x-ignition-environment: &ignition-environment
   ACCEPT_IGNITION_EULA: "Y"
   IGNITION_EDITION: standard
   TZ: ${TZ}
-
 services:
   bootstrap:
     image: *ignition-image
