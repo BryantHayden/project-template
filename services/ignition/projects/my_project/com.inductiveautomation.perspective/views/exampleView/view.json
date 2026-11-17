@@ -6,23 +6,1302 @@
     "children": [
       {
         "meta": {
-          "name": "Label"
+          "name": "TopBar"
         },
         "position": {
-          "basis": "32px",
+          "basis": "48px",
+          "grow": 0
+        },
+        "children": [
+          {
+            "meta": {
+              "name": "TopBarTitle"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 1
+            },
+            "props": {
+              "text": "RECIPE MANAGEMENT",
+              "style": {
+                "color": "#ffffff",
+                "fontSize": "17px",
+                "fontWeight": "600",
+                "padding": "12px 18px"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "TopBarUser"
+            },
+            "position": {
+              "basis": "220px",
+              "grow": 0
+            },
+            "props": {
+              "text": "PLANT OPERATIONS  |  ADMIN",
+              "style": {
+                "color": "#e8eef3",
+                "fontSize": "11px",
+                "textAlign": "right",
+                "padding": "16px"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "props": {
+          "direction": "row",
+          "style": {
+            "backgroundColor": "#526779",
+            "alignItems": "center"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "PageBody"
+        },
+        "position": {
+          "basis": "auto",
           "grow": 1
         },
+        "children": [
+          {
+            "meta": {
+              "name": "SideNavigation"
+            },
+            "position": {
+              "basis": "142px",
+              "grow": 0
+            },
+            "children": [
+              {
+                "meta": {
+                  "name": "NavHeading"
+                },
+                "position": {
+                  "basis": "42px",
+                  "grow": 0
+                },
+                "props": {
+                  "text": "WORKSPACE",
+                  "style": {
+                    "color": "#536575",
+                    "fontSize": "11px",
+                    "fontWeight": "700",
+                    "padding": "16px 12px 8px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "NavLibrary"
+                },
+                "position": {
+                  "basis": "42px",
+                  "grow": 0
+                },
+                "props": {
+                  "text": "Recipe Library",
+                  "style": {
+                    "backgroundColor": "#d8e2e9",
+                    "color": "#203447",
+                    "fontWeight": "600",
+                    "padding": "12px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "NavApprovals"
+                },
+                "position": {
+                  "basis": "42px",
+                  "grow": 0
+                },
+                "props": {
+                  "text": "Approvals",
+                  "style": {
+                    "color": "#34495a",
+                    "padding": "12px"
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "NavAudit"
+                },
+                "position": {
+                  "basis": "42px",
+                  "grow": 0
+                },
+                "props": {
+                  "text": "Audit History",
+                  "style": {
+                    "color": "#34495a",
+                    "padding": "12px"
+                  }
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#b9cbd7",
+                "borderRight": "1px solid #9eafba"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "MainContent"
+            },
+            "position": {
+              "basis": "auto",
+              "grow": 1
+            },
+            "children": [
+              {
+                "meta": {
+                  "name": "PageHeading"
+                },
+                "position": {
+                  "basis": "68px",
+                  "grow": 0
+                },
+                "children": [
+                  {
+                    "meta": {
+                      "name": "PageTitle"
+                    },
+                    "position": {
+                      "basis": "34px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Recipe Management / Approval",
+                      "style": {
+                        "color": "#172b3a",
+                        "fontSize": "21px",
+                        "fontWeight": "700",
+                        "padding": "8px 0 0"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "PageSubtitle"
+                    },
+                    "position": {
+                      "basis": "26px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Find, review, compare, edit and approve controlled recipe revisions.",
+                      "style": {
+                        "color": "#52616d",
+                        "fontSize": "13px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "FilterBar"
+                },
+                "position": {
+                  "basis": "66px",
+                  "grow": 0
+                },
+                "children": [
+                  {
+                    "meta": {
+                      "name": "EquipmentFilter"
+                    },
+                    "position": {
+                      "basis": "23%",
+                      "grow": 1
+                    },
+                    "props": {
+                      "text": "Equipment\nAll Equipment  v",
+                      "style": {
+                        "backgroundColor": "#ffffff",
+                        "border": "1px solid #c5cdd3",
+                        "color": "#283945",
+                        "fontSize": "12px",
+                        "padding": "8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "SkuFilter"
+                    },
+                    "position": {
+                      "basis": "20%",
+                      "grow": 1
+                    },
+                    "props": {
+                      "text": "SKU\nAll SKUs  v",
+                      "style": {
+                        "backgroundColor": "#ffffff",
+                        "border": "1px solid #c5cdd3",
+                        "color": "#283945",
+                        "fontSize": "12px",
+                        "padding": "8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "RecipeIdFilter"
+                    },
+                    "position": {
+                      "basis": "23%",
+                      "grow": 1
+                    },
+                    "props": {
+                      "text": "Recipe ID\nSearch by Recipe ID...",
+                      "style": {
+                        "backgroundColor": "#ffffff",
+                        "border": "1px solid #c5cdd3",
+                        "color": "#283945",
+                        "fontSize": "12px",
+                        "padding": "8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "RevisionStatusFilter"
+                    },
+                    "position": {
+                      "basis": "20%",
+                      "grow": 1
+                    },
+                    "props": {
+                      "text": "Revision Status\nAll Revisions  v",
+                      "style": {
+                        "backgroundColor": "#ffffff",
+                        "border": "1px solid #c5cdd3",
+                        "color": "#283945",
+                        "fontSize": "12px",
+                        "padding": "8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "ClearFilter"
+                    },
+                    "position": {
+                      "basis": "105px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Clear Filter",
+                      "style": {
+                        "backgroundColor": "#edf1f4",
+                        "border": "1px solid #aeb8bf",
+                        "borderRadius": "4px",
+                        "color": "#263746",
+                        "fontSize": "12px",
+                        "textAlign": "center",
+                        "padding": "12px 8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "props": {
+                  "direction": "row",
+                  "style": {
+                    "alignItems": "center",
+                    "backgroundColor": "#e5e9ec",
+                    "gap": "8px",
+                    "padding": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "ReviewWorkspace"
+                },
+                "position": {
+                  "basis": "365px",
+                  "grow": 1
+                },
+                "children": [
+                  {
+                    "meta": {
+                      "name": "RecipeLibrary"
+                    },
+                    "position": {
+                      "basis": "29%",
+                      "grow": 1
+                    },
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "LibraryTitle"
+                        },
+                        "position": {
+                          "basis": "35px",
+                          "grow": 0
+                        },
+                        "props": {
+                          "text": "Recipe Library",
+                          "style": {
+                            "color": "#1d3343",
+                            "fontSize": "15px",
+                            "fontWeight": "700",
+                            "padding": "8px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "LibraryTable"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 1
+                        },
+                        "props": {
+                          "data": [
+                            {
+                              "recipeId": "RCP-1042",
+                              "sku": "A-120",
+                              "equipment": "Mixer 01",
+                              "revision": "07",
+                              "status": "Approved"
+                            },
+                            {
+                              "recipeId": "RCP-1043",
+                              "sku": "B-210",
+                              "equipment": "Mixer 02",
+                              "revision": "03",
+                              "status": "In Review"
+                            },
+                            {
+                              "recipeId": "RCP-1044",
+                              "sku": "C-330",
+                              "equipment": "Filler 01",
+                              "revision": "02",
+                              "status": "Draft"
+                            },
+                            {
+                              "recipeId": "RCP-1045",
+                              "sku": "A-120",
+                              "equipment": "Mixer 01",
+                              "revision": "01",
+                              "status": "Approved"
+                            },
+                            {
+                              "recipeId": "RCP-1046",
+                              "sku": "D-410",
+                              "equipment": "Blender 02",
+                              "revision": "05",
+                              "status": "In Review"
+                            },
+                            {
+                              "recipeId": "RCP-1047",
+                              "sku": "B-210",
+                              "equipment": "Filler 02",
+                              "revision": "04",
+                              "status": "Approved"
+                            }
+                          ],
+                          "columns": [
+                            {
+                              "field": "recipeId",
+                              "header": {
+                                "title": "Recipe ID"
+                              },
+                              "width": 90,
+                              "sortable": true
+                            },
+                            {
+                              "field": "sku",
+                              "header": {
+                                "title": "SKU"
+                              },
+                              "width": 58
+                            },
+                            {
+                              "field": "equipment",
+                              "header": {
+                                "title": "Equipment"
+                              },
+                              "width": 92
+                            },
+                            {
+                              "field": "revision",
+                              "header": {
+                                "title": "Rev"
+                              },
+                              "width": 46
+                            },
+                            {
+                              "field": "status",
+                              "header": {
+                                "title": "Status"
+                              },
+                              "width": 82
+                            }
+                          ],
+                          "enableHeader": true,
+                          "style": {
+                            "backgroundColor": "#ffffff",
+                            "border": "1px solid #b8c0c6",
+                            "color": "#243746",
+                            "fontSize": "10px"
+                          },
+                          "headerStyle": {
+                            "backgroundColor": "#dce3e8",
+                            "color": "#203447",
+                            "fontWeight": "600"
+                          },
+                          "rows": {
+                            "height": "32px"
+                          }
+                        },
+                        "type": "ia.display.table"
+                      }
+                    ],
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#f8f9fa",
+                        "border": "1px solid #aeb7bf",
+                        "padding": "6px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "ControlledParameters"
+                    },
+                    "position": {
+                      "basis": "31%",
+                      "grow": 1
+                    },
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "ParametersTitle"
+                        },
+                        "position": {
+                          "basis": "35px",
+                          "grow": 0
+                        },
+                        "props": {
+                          "text": "Controlled Parameters",
+                          "style": {
+                            "color": "#1d3343",
+                            "fontSize": "15px",
+                            "fontWeight": "700",
+                            "padding": "8px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "ParametersTable"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 1
+                        },
+                        "props": {
+                          "data": [
+                            {
+                              "parameter": "Mix Time",
+                              "unit": "min",
+                              "minimum": 5,
+                              "setpoint": 12,
+                              "maximum": 30
+                            },
+                            {
+                              "parameter": "Mix Speed",
+                              "unit": "rpm",
+                              "minimum": 20,
+                              "setpoint": 45,
+                              "maximum": 80
+                            },
+                            {
+                              "parameter": "Temperature",
+                              "unit": "deg C",
+                              "minimum": 18,
+                              "setpoint": 22,
+                              "maximum": 35
+                            },
+                            {
+                              "parameter": "Pressure",
+                              "unit": "bar",
+                              "minimum": 1.0,
+                              "setpoint": 2.4,
+                              "maximum": 4.0
+                            },
+                            {
+                              "parameter": "Additive A",
+                              "unit": "kg",
+                              "minimum": 0.0,
+                              "setpoint": 1.5,
+                              "maximum": 5.0
+                            },
+                            {
+                              "parameter": "Additive B",
+                              "unit": "kg",
+                              "minimum": 0.0,
+                              "setpoint": 0.8,
+                              "maximum": 4.0
+                            },
+                            {
+                              "parameter": "Hold Time",
+                              "unit": "min",
+                              "minimum": 0,
+                              "setpoint": 10,
+                              "maximum": 60
+                            },
+                            {
+                              "parameter": "Cool Temp",
+                              "unit": "deg C",
+                              "minimum": 2,
+                              "setpoint": 8,
+                              "maximum": 15
+                            },
+                            {
+                              "parameter": "Final pH",
+                              "unit": "pH",
+                              "minimum": 5.0,
+                              "setpoint": 6.8,
+                              "maximum": 8.0
+                            }
+                          ],
+                          "columns": [
+                            {
+                              "field": "parameter",
+                              "header": {
+                                "title": "Parameter"
+                              },
+                              "width": 108
+                            },
+                            {
+                              "field": "unit",
+                              "header": {
+                                "title": "Unit"
+                              },
+                              "width": 56
+                            },
+                            {
+                              "field": "minimum",
+                              "header": {
+                                "title": "Minimum"
+                              },
+                              "width": 68
+                            },
+                            {
+                              "field": "setpoint",
+                              "header": {
+                                "title": "Setpoint"
+                              },
+                              "width": 68
+                            },
+                            {
+                              "field": "maximum",
+                              "header": {
+                                "title": "Maximum"
+                              },
+                              "width": 68
+                            }
+                          ],
+                          "enableHeader": true,
+                          "style": {
+                            "backgroundColor": "#ffffff",
+                            "border": "1px solid #b8c0c6",
+                            "color": "#243746",
+                            "fontSize": "10px"
+                          },
+                          "headerStyle": {
+                            "backgroundColor": "#dce3e8",
+                            "color": "#203447",
+                            "fontWeight": "600"
+                          },
+                          "rows": {
+                            "height": "30px"
+                          }
+                        },
+                        "type": "ia.display.table"
+                      }
+                    ],
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#f8f9fa",
+                        "border": "1px solid #aeb7bf",
+                        "padding": "6px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  },
+                  {
+                    "meta": {
+                      "name": "RevisionComparison"
+                    },
+                    "position": {
+                      "basis": "40%",
+                      "grow": 1
+                    },
+                    "children": [
+                      {
+                        "meta": {
+                          "name": "ComparisonTitle"
+                        },
+                        "position": {
+                          "basis": "35px",
+                          "grow": 0
+                        },
+                        "props": {
+                          "text": "Revision Comparison",
+                          "style": {
+                            "color": "#1d3343",
+                            "fontSize": "15px",
+                            "fontWeight": "700",
+                            "padding": "8px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      },
+                      {
+                        "meta": {
+                          "name": "RevisionColumns"
+                        },
+                        "position": {
+                          "basis": "auto",
+                          "grow": 1
+                        },
+                        "children": [
+                          {
+                            "meta": {
+                              "name": "CurrentRevision"
+                            },
+                            "position": {
+                              "basis": "50%",
+                              "grow": 1
+                            },
+                            "children": [
+                              {
+                                "meta": {
+                                  "name": "CurrentTitle"
+                                },
+                                "position": {
+                                  "basis": "32px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "CURRENT ACTIVE REVISION",
+                                  "style": {
+                                    "backgroundColor": "#67c77b",
+                                    "color": "#102c18",
+                                    "fontSize": "11px",
+                                    "fontWeight": "700",
+                                    "padding": "9px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CurrentDetails"
+                                },
+                                "position": {
+                                  "basis": "auto",
+                                  "grow": 1
+                                },
+                                "props": {
+                                  "data": [
+                                    {
+                                      "field": "Recipe ID",
+                                      "value": "RCP-1042"
+                                    },
+                                    {
+                                      "field": "SKU",
+                                      "value": "A-120"
+                                    },
+                                    {
+                                      "field": "Equipment",
+                                      "value": "Mixer 01"
+                                    },
+                                    {
+                                      "field": "Revision",
+                                      "value": "06"
+                                    },
+                                    {
+                                      "field": "Status",
+                                      "value": "Approved"
+                                    },
+                                    {
+                                      "field": "Created By",
+                                      "value": "J. Smith"
+                                    },
+                                    {
+                                      "field": "Created",
+                                      "value": "2026-10-28"
+                                    }
+                                  ],
+                                  "columns": [
+                                    {
+                                      "field": "field",
+                                      "width": 92
+                                    },
+                                    {
+                                      "field": "value",
+                                      "width": 110
+                                    }
+                                  ],
+                                  "enableHeader": false,
+                                  "style": {
+                                    "backgroundColor": "#ffffff",
+                                    "border": "1px solid #c4cbd0",
+                                    "color": "#263746",
+                                    "fontSize": "10px"
+                                  },
+                                  "rows": {
+                                    "height": "24px"
+                                  }
+                                },
+                                "type": "ia.display.table"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CurrentChangeSummaryTitle"
+                                },
+                                "position": {
+                                  "basis": "26px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "Change Summary",
+                                  "style": {
+                                    "fontSize": "11px",
+                                    "fontWeight": "600",
+                                    "padding": "6px 2px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CurrentChangeSummary"
+                                },
+                                "position": {
+                                  "basis": "48px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "Approved production recipe.",
+                                  "style": {
+                                    "backgroundColor": "#ffffff",
+                                    "border": "1px solid #c4cbd0",
+                                    "color": "#52616d",
+                                    "fontSize": "10px",
+                                    "padding": "8px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              }
+                            ],
+                            "props": {
+                              "direction": "column",
+                              "style": {
+                                "padding": "4px"
+                              }
+                            },
+                            "type": "ia.container.flex"
+                          },
+                          {
+                            "meta": {
+                              "name": "CandidateRevision"
+                            },
+                            "position": {
+                              "basis": "50%",
+                              "grow": 1
+                            },
+                            "children": [
+                              {
+                                "meta": {
+                                  "name": "CandidateTitle"
+                                },
+                                "position": {
+                                  "basis": "32px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "CANDIDATE REVISION",
+                                  "style": {
+                                    "backgroundColor": "#f5d875",
+                                    "color": "#3e3210",
+                                    "fontSize": "11px",
+                                    "fontWeight": "700",
+                                    "padding": "9px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CandidateDetails"
+                                },
+                                "position": {
+                                  "basis": "auto",
+                                  "grow": 1
+                                },
+                                "props": {
+                                  "data": [
+                                    {
+                                      "field": "Recipe ID",
+                                      "value": "RCP-1042"
+                                    },
+                                    {
+                                      "field": "SKU",
+                                      "value": "A-120"
+                                    },
+                                    {
+                                      "field": "Equipment",
+                                      "value": "Mixer 01"
+                                    },
+                                    {
+                                      "field": "Revision",
+                                      "value": "07"
+                                    },
+                                    {
+                                      "field": "Status",
+                                      "value": "In Review"
+                                    },
+                                    {
+                                      "field": "Created By",
+                                      "value": "A. Patel"
+                                    },
+                                    {
+                                      "field": "Created",
+                                      "value": "2026-11-16"
+                                    }
+                                  ],
+                                  "columns": [
+                                    {
+                                      "field": "field",
+                                      "width": 92
+                                    },
+                                    {
+                                      "field": "value",
+                                      "width": 110
+                                    }
+                                  ],
+                                  "enableHeader": false,
+                                  "style": {
+                                    "backgroundColor": "#ffffff",
+                                    "border": "1px solid #c4cbd0",
+                                    "color": "#263746",
+                                    "fontSize": "10px"
+                                  },
+                                  "rows": {
+                                    "height": "24px"
+                                  }
+                                },
+                                "type": "ia.display.table"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CandidateChangeSummaryTitle"
+                                },
+                                "position": {
+                                  "basis": "26px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "Change Summary",
+                                  "style": {
+                                    "fontSize": "11px",
+                                    "fontWeight": "600",
+                                    "padding": "6px 2px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              },
+                              {
+                                "meta": {
+                                  "name": "CandidateChangeSummary"
+                                },
+                                "position": {
+                                  "basis": "48px",
+                                  "grow": 0
+                                },
+                                "props": {
+                                  "text": "Updated mix time and additive levels.",
+                                  "style": {
+                                    "backgroundColor": "#ffffff",
+                                    "border": "1px solid #c4cbd0",
+                                    "color": "#52616d",
+                                    "fontSize": "10px",
+                                    "padding": "8px"
+                                  }
+                                },
+                                "type": "ia.display.label"
+                              }
+                            ],
+                            "props": {
+                              "direction": "column",
+                              "style": {
+                                "padding": "4px"
+                              }
+                            },
+                            "type": "ia.container.flex"
+                          }
+                        ],
+                        "props": {
+                          "direction": "row"
+                        },
+                        "type": "ia.container.flex"
+                      },
+                      {
+                        "meta": {
+                          "name": "ChangeCount"
+                        },
+                        "position": {
+                          "basis": "32px",
+                          "grow": 0
+                        },
+                        "props": {
+                          "text": "Changed Parameters:  2     |     View Differences",
+                          "style": {
+                            "backgroundColor": "#f2f5f7",
+                            "border": "1px solid #c3cbd1",
+                            "color": "#243746",
+                            "fontSize": "11px",
+                            "fontWeight": "600",
+                            "padding": "8px"
+                          }
+                        },
+                        "type": "ia.display.label"
+                      }
+                    ],
+                    "props": {
+                      "direction": "column",
+                      "style": {
+                        "backgroundColor": "#f8f9fa",
+                        "border": "1px solid #aeb7bf",
+                        "padding": "6px"
+                      }
+                    },
+                    "type": "ia.container.flex"
+                  }
+                ],
+                "props": {
+                  "direction": "row",
+                  "style": {
+                    "gap": "8px",
+                    "paddingTop": "10px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "AuditHistory"
+                },
+                "position": {
+                  "basis": "185px",
+                  "grow": 0
+                },
+                "children": [
+                  {
+                    "meta": {
+                      "name": "AuditTitle"
+                    },
+                    "position": {
+                      "basis": "34px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Audit Revision History",
+                      "style": {
+                        "color": "#1d3343",
+                        "fontSize": "15px",
+                        "fontWeight": "700",
+                        "padding": "8px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "AuditRows"
+                    },
+                    "position": {
+                      "basis": "auto",
+                      "grow": 1
+                    },
+                    "props": {
+                      "data": [
+                        {
+                          "revision": "07",
+                          "action": "Submitted",
+                          "user": "A. Patel",
+                          "timestamp": "2026-11-16 14:32",
+                          "comments": "Updated mix time and additives"
+                        },
+                        {
+                          "revision": "06",
+                          "action": "Approved",
+                          "user": "J. Smith",
+                          "timestamp": "2026-10-28 09:14",
+                          "comments": "Production release"
+                        },
+                        {
+                          "revision": "05",
+                          "action": "Edited",
+                          "user": "M. Chen",
+                          "timestamp": "2026-10-26 16:08",
+                          "comments": "Adjusted target temperature"
+                        },
+                        {
+                          "revision": "04",
+                          "action": "Approved",
+                          "user": "J. Smith",
+                          "timestamp": "2026-10-10 11:47",
+                          "comments": "QA review complete"
+                        }
+                      ],
+                      "columns": [
+                        {
+                          "field": "revision",
+                          "header": {
+                            "title": "Revision"
+                          },
+                          "width": 75
+                        },
+                        {
+                          "field": "action",
+                          "header": {
+                            "title": "Action"
+                          },
+                          "width": 100
+                        },
+                        {
+                          "field": "user",
+                          "header": {
+                            "title": "User"
+                          },
+                          "width": 110
+                        },
+                        {
+                          "field": "timestamp",
+                          "header": {
+                            "title": "Timestamp"
+                          },
+                          "width": 145
+                        },
+                        {
+                          "field": "comments",
+                          "header": {
+                            "title": "Comments"
+                          },
+                          "width": 400
+                        }
+                      ],
+                      "enableHeader": true,
+                      "style": {
+                        "backgroundColor": "#ffffff",
+                        "border": "1px solid #b8c0c6",
+                        "color": "#243746",
+                        "fontSize": "10px"
+                      },
+                      "headerStyle": {
+                        "backgroundColor": "#dce3e8",
+                        "color": "#203447",
+                        "fontWeight": "600"
+                      },
+                      "rows": {
+                        "height": "30px"
+                      }
+                    },
+                    "type": "ia.display.table"
+                  }
+                ],
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "backgroundColor": "#f8f9fa",
+                    "border": "1px solid #aeb7bf",
+                    "marginTop": "10px",
+                    "padding": "6px"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "meta": {
+                  "name": "ApprovalActions"
+                },
+                "position": {
+                  "basis": "48px",
+                  "grow": 0
+                },
+                "children": [
+                  {
+                    "meta": {
+                      "name": "SaveRevision"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Save New Revision",
+                      "style": {
+                        "backgroundColor": "#edf1f4",
+                        "border": "1px solid #9eabb4",
+                        "borderRadius": "4px",
+                        "color": "#243746",
+                        "fontSize": "12px",
+                        "textAlign": "center",
+                        "padding": "12px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "CompareActive"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Compare to Active",
+                      "style": {
+                        "backgroundColor": "#edf1f4",
+                        "border": "1px solid #9eabb4",
+                        "borderRadius": "4px",
+                        "color": "#243746",
+                        "fontSize": "12px",
+                        "textAlign": "center",
+                        "padding": "12px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "ApproveRevision"
+                    },
+                    "position": {
+                      "basis": "160px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Approve Revision",
+                      "style": {
+                        "backgroundColor": "#138b35",
+                        "borderRadius": "4px",
+                        "color": "#ffffff",
+                        "fontSize": "12px",
+                        "fontWeight": "700",
+                        "textAlign": "center",
+                        "padding": "12px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "RejectRevision"
+                    },
+                    "position": {
+                      "basis": "150px",
+                      "grow": 0
+                    },
+                    "props": {
+                      "text": "Reject Revision",
+                      "style": {
+                        "backgroundColor": "#f7e4e3",
+                        "border": "1px solid #df9993",
+                        "borderRadius": "4px",
+                        "color": "#8f2d27",
+                        "fontSize": "12px",
+                        "fontWeight": "600",
+                        "textAlign": "center",
+                        "padding": "12px"
+                      }
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "props": {
+                  "direction": "row",
+                  "style": {
+                    "alignItems": "center",
+                    "gap": "10px",
+                    "justifyContent": "flex-end",
+                    "paddingTop": "8px"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "props": {
+              "direction": "column",
+              "style": {
+                "backgroundColor": "#f3f4f5",
+                "gap": "6px",
+                "padding": "14px"
+              }
+            },
+            "type": "ia.container.flex"
+          }
+        ],
         "props": {
-          "text": "Git Label"
+          "direction": "row"
         },
-        "type": "ia.display.label"
+        "type": "ia.container.flex"
       }
     ],
     "meta": {
       "name": "root"
     },
     "props": {
-      "direction": "column"
+      "direction": "column",
+      "style": {
+        "backgroundColor": "#edf0f2",
+        "height": "100%",
+        "width": "100%"
+      }
     },
     "type": "ia.container.flex"
   }
